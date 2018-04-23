@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="frc_gesamtindex.xsl"?>
+<IndexPersRer>
+  <concept n="" type="" subtype="" ref="" xml:id="">
+    <form>
+      <w xml:lang=""/>
+    </form>
+    <ref>
+      <volume n="">
+        <p n=""/>
+      </volume>
+    </ref>
+    <crossRef>
+      <refItem ref=""/>
+    </crossRef>
+    <subconcept n="" type="" subtype="" ref="" xml:id="">
+      <form>
+        <w xml:lang=""/>
+      </form>
+      <ref>
+        <volume n="">
+          <p n=""/>
+        </volume>
+      </ref>
+      <crossRef>
+        <refItem ref=""/>
+      </crossRef>
+      <subsubConcept n="" type="" subtype="" ref="" xml:id="">
+        <form>
+          <w xml:lang=""/>
+        </form>
+        <ref>
+          <volume n="">
+            <p n=""/>
+          </volume>
+        </ref>
+        <crossRef>
+          <refItem ref=""/>
+        </crossRef>
+      </subsubConcept>
+    </subconcept>
+  </concept>
+</IndexPersRer>

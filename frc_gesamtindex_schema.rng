@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="IndexPersRer">
+      <oneOrMore>
+        <ref name="concept"/>
+      </oneOrMore>
+    </element>
+  </start>
+  <define name="concept">
+    <element name="concept">
+      <optional>
+        <attribute name="n"/>
+      </optional>
+      <optional>
+        <attribute name="subtype"/>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="concept"/>
+          <ref name="subconcept"/>
+          <ref name="volume"/>
+          <ref name="w"/>
+          <element name="crossRef">
+            <oneOrMore>
+              <choice>
+                <text/>
+                <ref name="concept"/>
+              </choice>
+            </oneOrMore>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="volume">
+    <element name="volume">
+      <attribute name="n">
+        <data type="decimal"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="subconcept"/>
+          <element name="p">
+            <optional>
+              <attribute name="n"/>
+            </optional>
+            <text/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="w">
+    <element name="w">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="NCName"/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+  <define name="subconcept">
+    <element name="subconcept">
+      <attribute name="n"/>
+      <optional>
+        <ref name="w"/>
+      </optional>
+      <ref name="volume"/>
+    </element>
+  </define>
+</grammar>
